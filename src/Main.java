@@ -4,6 +4,7 @@ public class Main {
     public static void main(String[] args) {
 
         int currentYear = 2022;
+
     }
 
     public static String getInputFromConsole (int currentYear){
