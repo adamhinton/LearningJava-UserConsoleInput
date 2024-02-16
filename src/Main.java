@@ -5,9 +5,12 @@ public class Main {
 
         int currentYear = 2022;
 
-        System.out.println(getInputFromConsole(currentYear));
-
-        System.out.println(getInputFromScanner(currentYear));
+        try{
+            System.out.println(getInputFromConsole(currentYear));
+        }
+        catch(NullPointerException e){
+            System.out.println(getInputFromScanner(currentYear));
+        }
 
     }
 
