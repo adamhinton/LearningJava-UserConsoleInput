@@ -14,10 +14,12 @@ public class Main {
     public static String getInputFromConsole (int currentYear){
 
         String name = System.console().readLine("Hi, what's your name? ");
-
         System.out.println("Hi, " + name + " thanks for taking the course");
 
-        return "";
+        String dateOfBirth = System.console().readLine("What year were you born?");
+        int age = currentYear - Integer.parseInt(dateOfBirth);
+
+        return "So you are" + age + " years old";
     }
 
     public static String getInputFromScanner (int currentYear){
