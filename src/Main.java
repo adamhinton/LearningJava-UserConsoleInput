@@ -5,9 +5,18 @@ public class Main {
 
         int currentYear = 2022;
 
+        System.out.println(getInputFromConsole(currentYear));
+
+        System.out.println(getInputFromScanner(currentYear));
+
     }
 
     public static String getInputFromConsole (int currentYear){
+
+        String name = System.console().readLine("Hi, what's your name? ");
+
+        System.out.println("Hi, " + name + " thanks for taking the course");
+
         return "";
     }
 
