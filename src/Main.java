@@ -28,8 +28,36 @@ public class Main {
     }
 
     public static String getInputFromScanner (int currentYear){
+
         Scanner scanner = new Scanner(System.in);
 
-        return "";
+        System.out.println("Hi, What's your name?");
+        String name = scanner.nextLine();
+
+        System.out.println("What year were you born?");
+        boolean validDOB = false;
+        int age = 0;
+
+        do{
+            System.out.println("Enter a year of birth >= " + (currentYear - 125) + "and <= " + (currentYear));
+
+            age = checkData(currentYear, scanner.nextLine());
+            validDOB = age > 0;
+        }
+        while(!validDOB);
+
+
+        return "So you are " + age + " years old";
+    }
+
+    public static int checkData(int currentYear, String dateOfBirth){
+        int dob = Integer.parseInt(dateOfBirth);
+        int minimumYear = currentYear - 125;
+
+        if((dob < minimumYear) || (dob > currentYear)){
+            return -1;
+        }
+
+        return currentYear - dob;
     }
 }
